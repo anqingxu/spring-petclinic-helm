@@ -10,8 +10,8 @@ application:
   logLevel: DEBUG
 
 image:
-  repository: arey/springboot-petclinic
-  tag: latest
+  repository: anqingxu/petclinic
+  tag: v1.0.0
   pullPolicy: IfNotPresent
 
 service:
