@@ -6,17 +6,16 @@ replicaCount: 1
 
 application:
   profile: prod
-  contextPath: /somewhere
   logLevel: DEBUG
 
 image:
   repository: anqingxu/petclinic
-  tag: v1.0.0
+  tag: v1.0.1
   pullPolicy: IfNotPresent
 
 service:
-  type: NodePort
-  port: 8080
+  type: ClusterIP
+  port: 8081
 
 ingress:
   enabled: false

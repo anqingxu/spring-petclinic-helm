@@ -5,8 +5,6 @@ metadata:
   labels:
     app: {{ template "spring-petclinic.name" . }}
     chart: {{ template "spring-petclinic.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -16,4 +14,3 @@ spec:
       name: http
   selector:
     app: {{ template "spring-petclinic.name" . }}
-    release: {{ .Release.Name }}
