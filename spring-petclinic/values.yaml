@@ -10,7 +10,7 @@ application:
 
 image:
   repository: anqingxu/petclinic
-  tag: v1.0.6
+  tag: v1.0.0
   pullPolicy: IfNotPresent
 
 service:
