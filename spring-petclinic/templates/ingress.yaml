@@ -24,13 +24,11 @@ spec:
   {{- end }}
 {{- end }}
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . }}
+    - host: petclinic.dev1.globallink.net
       http:
         paths:
-          - path: {{ $ingressPath }}
+          - path: /
             backend:
               serviceName: {{ $fullName }}
               servicePort: http
-  {{- end }}
 {{- end }}
