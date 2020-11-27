@@ -1,8 +1,8 @@
 apiVersion: v1
 name: spring-petclinic
 description: A Helm chart for SpringBoot PetClinic
-version: 1.0.5
-appVersion: "1.0.5"
+version: 1.0.6
+appVersion: "1.0.6"
 home: https://github.com/anqingxu/spring-petclinic-helm
 sources:
   - https://github.com/spring-petclinic/spring-petclinic-angularjs
