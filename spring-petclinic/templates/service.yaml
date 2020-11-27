@@ -5,6 +5,8 @@ metadata:
   labels:
     app: {{ template "spring-petclinic.name" . }}
     chart: {{ template "spring-petclinic.chart" . }}
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   type: {{ .Values.service.type }}
   ports:

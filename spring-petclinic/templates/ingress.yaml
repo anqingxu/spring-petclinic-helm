@@ -11,6 +11,8 @@ metadata:
     chart: {{ template "spring-petclinic.chart" . }}
 {{- with .Values.ingress.annotations }}
   annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
