@@ -24,8 +24,7 @@ spec:
   {{- end }}
 {{- end }}
   rules:
-    - host: petclinic.dev1.globallink.net
-      http:
+    - http:
         paths:
           - path: /
             backend:
