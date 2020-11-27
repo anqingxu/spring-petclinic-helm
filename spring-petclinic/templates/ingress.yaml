@@ -12,6 +12,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
+    external-dns.alpha.kubernetes.io/hostname: petclinic.dev1.globallink.net
 spec:
 {{- if .Values.ingress.tls }}
   tls:

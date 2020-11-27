@@ -7,6 +7,7 @@ metadata:
     chart: {{ template "spring-petclinic.chart" . }}
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    external-dns.alpha.kubernetes.io/hostname: petclinic.dev1.globallink.net
 spec:
   type: {{ .Values.service.type }}
   ports:
