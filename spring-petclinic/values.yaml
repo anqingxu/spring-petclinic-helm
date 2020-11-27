@@ -21,7 +21,7 @@ ingress:
   enabled: false
   #annotations:
   #  kubernetes.io/tls-acme: "true"
-  #path: /
+  path: /
   #hosts:
   #  - petclinic.example.com
   #tls:

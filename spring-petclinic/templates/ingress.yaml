@@ -2,19 +2,16 @@
 {{- $fullName := include "spring-petclinic.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
-apiVersion: extensions/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
     app: {{ template "spring-petclinic.name" . }}
     chart: {{ template "spring-petclinic.chart" . }}
-{{- with .Values.ingress.annotations }}
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-{{ toYaml . | indent 4 }}
-{{- end }}
 spec:
 {{- if .Values.ingress.tls }}
   tls:
